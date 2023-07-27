@@ -1,4 +1,6 @@
 /****** General ***********/
+@import url(header.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -7,6 +9,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --txt-color: #000;
 }
 
 .fa-solid {
@@ -16,6 +19,8 @@
 body {
     display: flex;
     justify-content: center;
+    margin:0px;
+    padding:0px;
 }
 
 .main-container {
@@ -50,8 +55,19 @@ body {
 }
 
 .neutral-star {
-    color: var(--main-bg-color)
+    color: var(--main-bg-color);
 }
+
+
+h1, h2 {
+    font-weight: 700;
+    font-size:1.35rem;
+}
+
+
+/****** info-group ***********/
+
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
