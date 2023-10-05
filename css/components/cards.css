@@ -1,0 +1,228 @@
+.card {
+  width: 100%;
+  background-color: var(--white-bg-color);
+  border-radius: 20px;
+  padding: 5px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  color: var(--txt-color);
+}
+
+.card-title {
+  font-size: 1rem;
+}
+
+.euro {
+  font-weight: 700;
+}
+
+.card-rating i {
+  font-size: 0.9rem;
+  margin-right: -3px;
+  margin-bottom: 5px;
+}
+
+img:is(.hebergements img, .populaires img, .activities img) {
+  object-fit: cover;
+}
+
+/* hebergements-and-populaires */
+
+.hebergements-and-populaires .card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.hebergements-and-populaires .card h3,
+.hebergements-and-populaires .card p {
+  margin: 0;
+  padding-bottom: 8px;
+}
+
+/* Hebergements cards */
+
+.hebergements-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+}
+
+.hebergements a {
+  display: flex;
+  width: 31%;
+}
+
+.hebergements .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hebergements img {
+  height: 124px;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.hebergements .card-rating {
+  padding-left: 10px;
+}
+
+/* Populaires cards */
+
+.populaires-cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  padding-top: 30px;
+}
+
+.populaires-cards .card {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.populaires-cards img {
+  height: 145px;
+  width: 36%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* activities cards */
+
+.activities-cards {
+  display: flex;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.activities-cards a {
+  flex: 1;
+  display: flex;
+}
+
+.activities .card {
+  padding: 0;
+}
+
+.activities-cards img {
+  width: 100%;
+  height: 380px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.activities-cards .card-content {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.activities-cards .card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activities-cards h3 {
+  margin: 0;
+}
+
+/* Medias */
+
+@media (max-width: 1024px) {
+  .populaires-cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .populaires-cards a {
+    width: 31%;
+  }
+
+  .populaires-cards .card-subtitle {
+    font-size: 0.815rem;
+  }
+
+  .activities-cards img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hebergements-cards {
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Hôtel du port */
+  .hebergements-cards a:nth-child(1) {
+    order: 1;
+  }
+  /* Hôtel Chez Amina */
+  .hebergements-cards a:nth-child(2) {
+    order: 6;
+  }
+  /* Hôtel Les mouettes */
+  .hebergements-cards a:nth-child(3) {
+    order: 3;
+  }
+  /* Hôtel de la mer */
+  .hebergements-cards a:nth-child(4) {
+    order: 4;
+  }
+  /* Auberge La Canebière */
+  .hebergements-cards a:nth-child(5) {
+    order: 2;
+  }
+  /* Auberge Le Panier */
+  .hebergements-cards a:nth-child(6) {
+    order: 5;
+  }
+
+  .hebergements a {
+    width: 100%;
+  }
+
+  .hebergements-title {
+    padding-bottom: 15px;
+  }
+
+  section.populaires {
+    margin: 0;
+  }
+
+  .populaires-cards {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .populaires-cards a {
+    width: 100%;
+  }
+
+  .activities-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .activities-cards a {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .activities-cards .card-content {
+    height: 60px;
+  }
+  .activities-cards img {
+    height: 140px;
+  }
+}
